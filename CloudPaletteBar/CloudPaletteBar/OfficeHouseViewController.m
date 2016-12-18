@@ -714,6 +714,7 @@ static NSString *Identifier20=@"Identifier20";
                 }
             }
         };
+        lowSelectDateView.cellTitleLable.text=@"";
         if (section==13) {
             lowSelectDateView.titleSwitch.on=NO;
             lowSelectDateView.cellTitleLable.text=@"朝向";

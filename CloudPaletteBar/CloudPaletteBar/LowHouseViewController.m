@@ -499,6 +499,8 @@ static NSString *Identifier20=@"Identifier20";
             formInPutView.formTextField.text=lowHouseListModel.建筑面积;
         }if (section==8&&lowHouseListModel.物业管理费) {
             formInPutView.formTextField.text=lowHouseListModel.物业管理费;
+        }if (section==21&&lowHouseListModel.价格) {
+            formInPutView.formTextField.text=lowHouseListModel.价格;
         }
         return formInPutView;
     }else if (section>=9&&section<=12) {
@@ -744,7 +746,7 @@ static NSString *Identifier20=@"Identifier20";
             if (Tag==1022) {
                 lowHouseListModel.阁楼=[array objectAtIndex:selectIndex];
             }else if (Tag==1023){
-                lowHouseListModel.挑高阳台面积=[array objectAtIndex:selectIndex];
+                lowHouseListModel.挑高阳台=[array objectAtIndex:selectIndex];
             }else if (Tag==1024){
                 lowHouseListModel.露台空中花园=[array objectAtIndex:selectIndex];
             }else if (Tag==1025){
@@ -1160,7 +1162,7 @@ static NSString *Identifier20=@"Identifier20";
     }else if (textField.tag==1028) {
         lowHouseListModel.中央空调个数=textField.text;
     }else if (textField.tag==1029) {
-        lowHouseListModel.电梯=textField.text;
+        lowHouseListModel.电梯个数=textField.text;
     }else if (textField.tag==1030) {
         lowHouseListModel.总赠送面积=textField.text;
     }else if (textField.tag==1031) {

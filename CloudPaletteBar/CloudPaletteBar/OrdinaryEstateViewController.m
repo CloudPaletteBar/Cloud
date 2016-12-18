@@ -385,24 +385,29 @@ static NSString *Identifier20=@"Identifier20";
     cell.cellTextField.delegate=self;
     cell.cellTextField.tag=10000+indexPath.section+indexPath.row;
     cell.cellTextField.text=@"";
+    cell.cellTextField.keyboardType=UIKeyboardTypeDefault;
     if (indexPath.section==26&&oEstateListModel.商场名称) {
         cell.cellTextField.text=oEstateListModel.商场名称;
     }else if (indexPath.section==27&&oEstateListModel.超市名称) {
         cell.cellTextField.text=oEstateListModel.超市名称;
     }else if (indexPath.section==28&&oEstateListModel.社区医院名称) {
         cell.cellTextField.text=oEstateListModel.社区医院名称;
-    }else if (indexPath.section==28&&oEstateListModel.会所个数) {
-        cell.cellTextField.text=oEstateListModel.会所个数;
+    }else if (indexPath.section==28) {
+        cell.cellTextField.keyboardType=UIKeyboardTypeNumberPad;
+        if (oEstateListModel.会所个数) {
+            cell.cellTextField.text=oEstateListModel.会所个数;
+        }
+        
     }else if (indexPath.section==32&&oEstateListModel.活动设施其它) {
         cell.cellTextField.text=oEstateListModel.活动设施其它;
     }else if (indexPath.section==37&&oEstateListModel.运动设施其它) {
         cell.cellTextField.text=oEstateListModel.运动设施其它;
     }else if (indexPath.section==38&&oEstateListModel.托儿所名称) {
         cell.cellTextField.text=oEstateListModel.托儿所名称;
-    }else if (indexPath.section==39&&oEstateListModel.小学名称){
-         cell.cellTextField.text=oEstateListModel.小学名称;
-    }else if (indexPath.section==40&&oEstateListModel.托儿所名称){
-        cell.cellTextField.text=oEstateListModel.托儿所名称;
+    }else if (indexPath.section==39&&oEstateListModel.幼儿园名称){
+         cell.cellTextField.text=oEstateListModel.幼儿园名称;
+    }else if (indexPath.section==40&&oEstateListModel.小学名称){
+        cell.cellTextField.text=oEstateListModel.小学名称;
     }else if (indexPath.section==41&&oEstateListModel.中学名称){
         cell.cellTextField.text=oEstateListModel.中学名称;
     }else if (indexPath.section==43&&oEstateListModel.海滨名称){
@@ -638,7 +643,7 @@ static NSString *Identifier20=@"Identifier20";
             NSLog(@"%ld",indexSwitch);
             if (open) {
                 if (indexSwitch==1016) {
-                    oEstateSecurityModel.小时保安=@"24小时保安";
+                    oEstateSecurityModel.小时保安=@"24小时安保";
                 }else if (indexSwitch==1115){
                     oEstateSecurityModel.定时巡逻=@"定时巡逻";
                 }else if (indexSwitch==1017){
