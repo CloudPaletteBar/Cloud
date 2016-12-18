@@ -38,7 +38,7 @@ static NetworkManager *networkManager;
 //时间戳转时间
 +(NSString *)str:(NSString *)strg{
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    [formatter setDateFormat:@"YYYY-MM-dd"];
+    [formatter setDateFormat:@"YYYY.MM.dd"];
     NSDate *confromTimesp = [NSDate dateWithTimeIntervalSince1970:[strg intValue]];
     NSString *confromTimespStr = [formatter stringFromDate:confromTimesp];
     return confromTimespStr;

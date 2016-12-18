@@ -21,7 +21,6 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    
     //注册通知
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loginVCCC) name:@"loginVCCC" object:nil];
     //监听网络

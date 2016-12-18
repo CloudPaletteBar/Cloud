@@ -756,29 +756,29 @@ static NSString *Identifier8=@"Identifier8";
 //判断必填项
 -(void)required{
     if (yesNo) {
-        if (!lowBanListModel.楼盘ID) {
+        if (!(lowBanListModel.楼盘ID.length>0)) {
             [BaseView _init:@"请选择楼盘名称" View:self.view];
-        }else if (!lowBanListModel.楼栋编号){
+        }else if (!(lowBanListModel.楼栋编号.length>0)){
             [BaseView _init:@"请选择系统楼栋名称" View:self.view];
-        }else if (!lowBanListModel.实际楼栋名称){
+        }else if (!(lowBanListModel.实际楼栋名称.length>0)){
             [BaseView _init:@"请输入实际楼栋名称" View:self.view];
-        }else if(!lowBanListModel.无法调查说明){
+        }else if(!(lowBanListModel.无法调查说明.length>0)){
             [BaseView _init:@"请输入无法调查说明" View:self.view];
         } else{
             [self netSaveFormData];
         }
     }else{
-        if (!lowBanListModel.楼盘ID) {
+        if (!(lowBanListModel.楼盘ID.length>0)) {
             [BaseView _init:@"请选择楼盘名称" View:self.view];
-        }else if (!lowBanListModel.楼栋编号){
+        }else if (!(lowBanListModel.楼栋编号.length>0)){
             [BaseView _init:@"请选择系统楼栋名称" View:self.view];
-        }else if (!lowBanListModel.实际楼栋名称){
+        }else if (!(lowBanListModel.实际楼栋名称.length>0)){
             [BaseView _init:@"请输入实际楼栋名称" View:self.view];
-        }else if (!lowBanListModel.总楼层){
+        }else if (!(lowBanListModel.总楼层.length>0)){
             [BaseView _init:@"请输入总楼层" View:self.view];
-        }else if (!lowBanListModel.地上楼层){
+        }else if (!(lowBanListModel.地上楼层.length>0)){
             [BaseView _init:@"请输入地上楼层" View:self.view];
-        }else if (!lowBanListModel.地下楼层){
+        }else if (!(lowBanListModel.地下楼层.length>0)){
             [BaseView _init:@"请输入地下楼层" View:self.view];
         }else{
             [self netSaveFormData];

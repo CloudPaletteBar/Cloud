@@ -498,6 +498,7 @@ static NSString *Identifier20=@"Identifier20";
         }if (section==6&&lowHouseListModel.建筑面积) {
             formInPutView.formTextField.text=lowHouseListModel.建筑面积;
         }if (section==8&&lowHouseListModel.物业管理费) {
+            formInPutView.formTextField.keyboardType=UIKeyboardTypeDecimalPad;
             formInPutView.formTextField.text=lowHouseListModel.物业管理费;
         }if (section==21&&lowHouseListModel.价格) {
             formInPutView.formTextField.text=lowHouseListModel.价格;
@@ -781,6 +782,7 @@ static NSString *Identifier20=@"Identifier20";
         }else if (section==29){
             [self Cselect_init:lowHouseListModel.电梯 SelectView:houseSelectView];
         }
+        
         return houseSelectView;
     }else if (section==2||section==7||section==30||section==31||section==41){
         FormInPutView *formInPutView=(FormInPutView *)[self C_init:Identifier2 ];
@@ -860,12 +862,7 @@ static NSString *Identifier20=@"Identifier20";
         lowSelectDateView.tag=section+1000;
         NSArray *array=[_dropDownArray objectAtIndex:section];
         [lowSelectDateView _init:[key objectAtIndex:0]PhImage:nil];
-//        if (array.count!=0) {
-//            if ([[array objectAtIndex:3] count]!=0) {
-//                [lowSelectDateView _init:[key objectAtIndex:0]PhImage:[[array objectAtIndex:3] objectAtIndex:0]];
-//            }
-//            
-//        }
+
         if (section==38&&lowHouseListModel.楼栋外观图) {
             [NetworkManager _initSdImage:[NetworkManager jiequStr:lowHouseListModel.楼栋外观图 rep:@","] ImageView:lowSelectDateView.phImageView];
         }else if (section==39&&lowHouseListModel.户型图){
@@ -922,51 +919,6 @@ static NSString *Identifier20=@"Identifier20";
             pOHViewController.ID=lowHouseListModel.ID;
             pOHViewController.stakID=self.estateID;
             pOHViewController.selectMax=5;
-//            NSLog(@"%d",ClockTag);
-//            PhotoPickerViewController *photoPickerViewController=[[PhotoPickerViewController alloc]init];
-//            if (array.count!=0) {
-//                photoPickerViewController.LQPhotoPicker_selectedAssetArray=[NSMutableArray arrayWithArray:[array objectAtIndex:0]];
-//                photoPickerViewController.LQPhotoPicker_smallImageArray=[NSMutableArray arrayWithArray:[array objectAtIndex:3]];
-//                photoPickerViewController.LQPhotoPicker_bigImageArray=[NSMutableArray arrayWithArray:[array objectAtIndex:1]];
-//            }
-//            
-//            photoPickerViewController.ClockPhon=^(NSArray *phionImgeArray){
-//                [_dropDownArray replaceObjectAtIndex:ClockTag-1000 withObject:phionImgeArray];
-//                [self Refresh:ClockTag-1000];
-//            };
-//            if (ClockTag==1038) {
-//                NSArray *aray=[NetworkManager address: lowHouseListModel.楼栋外观图];
-//                photoPickerViewController.LQPhotoPicker_smallImageArray=[NSMutableArray arrayWithArray:aray];
-//                photoPickerViewController.Arraycount=aray.count;
-//            }else if (ClockTag==1039) {
-//                NSArray *aray=[NetworkManager address:lowHouseListModel.户型图];
-//                photoPickerViewController.LQPhotoPicker_smallImageArray=[NSMutableArray arrayWithArray:aray];
-//                 photoPickerViewController.Arraycount=aray.count;
-//            }else if (ClockTag==1040) {
-//                NSArray *aray=[NetworkManager address:lowHouseListModel.景观图];
-//                photoPickerViewController.LQPhotoPicker_smallImageArray=[NSMutableArray arrayWithArray:aray];
-//                photoPickerViewController.Arraycount=aray.count;
-//            }
-//            photoPickerViewController.ClockSave=^(NSArray *ArrayID,NSString *ImageUrl){
-//                if (ClockTag==1038) {
-//                    lowHouseListModel.楼栋外观图=ImageUrl;
-//                    [IDs addObject:ArrayID];
-//                }else if (ClockTag==1039) {
-//                    lowHouseListModel.户型图=ImageUrl;
-//                    [IDs addObject:ArrayID];
-//                }else if (ClockTag==1040) {
-//                    lowHouseListModel.景观图=ImageUrl;
-//                    [IDs addObject:ArrayID];
-//                }
-//            };
-//            photoPickerViewController.type=self.selectSee;
-//            NSString *str=[NetworkManager Datastrings:[[self.baseArray objectAtIndex:ClockTag-1000] allKeys]];
-//            photoPickerViewController.imageType=str;
-//            photoPickerViewController.orderType=@"houseFangwu";
-//            photoPickerViewController.ID=lowHouseListModel.ID;
-//            photoPickerViewController.stakID=self.estateID;
-//            //            photoPickerViewController.LQPhotoPicker_selectedAssetArray=array;
-//            [self.navigationController pushViewController:photoPickerViewController animated:YES];
         };
         return lowSelectDateView;
         
@@ -997,8 +949,6 @@ static NSString *Identifier20=@"Identifier20";
         }else if([title isEqualToString:@"有"]){
             selectView.dVSwitch.selectedIndex=1;
         }
-        
-    
 }
 
 -(void)elect_init:(NSString *)title SelectView:(HouseSelectView *)selectView{
@@ -1225,27 +1175,27 @@ static NSString *Identifier20=@"Identifier20";
 -(void)required{
     lowHouseListModel.朝向=[NetworkManager Datastrings:[lowHouseOrientationModel.toDictionary allValues]];
     lowHouseListModel.户型结构=[NetworkManager Datastrings:[lowHouseStructureModel.toDictionary allValues]];
-    if (!lowHouseListModel.楼栋编号) {
+    if (!(lowHouseListModel.楼栋编号.length>0)) {
         [BaseView _init:@"请选择楼栋名称" View:self.view];
-    }else if (!lowHouseListModel.现用房号){
+    }else if (!(lowHouseListModel.现用房号.length>0)){
         [BaseView _init:@"请输入现用房号" View:self.view];
-    }else if (!lowHouseListModel.所在楼层){
+    }else if (!(lowHouseListModel.所在楼层.length>0)){
         [BaseView _init:@"请输入所在楼层" View:self.view];
-    }else if (!lowHouseListModel.建筑面积){
+    }else if (!(lowHouseListModel.建筑面积.length>0)){
         [BaseView _init:@"请输入建筑面积" View:self.view];
-    }else if (!lowHouseListModel.物业管理费){
+    }else if (!(lowHouseListModel.物业管理费.length>0)){
         [BaseView _init:@"请输入物业管理费" View:self.view];
-    }else if (!lowHouseListModel.价格){
+    }else if (!(lowHouseListModel.价格.length>0)){
         [BaseView _init:@"请输入价格" View:self.view];
-    }else if (!lowHouseListModel.楼栋外观图){
+    }else if (!(lowHouseListModel.楼栋外观图.length>0)){
         [BaseView _init:@"请选择楼栋外观图" View:self.view];
     }else if ([NetworkManager address:lowHouseListModel.楼栋外观图].count<2||[NetworkManager address:lowHouseListModel.楼栋外观图].count>6){
         [BaseView _init:@"楼栋外观图2-5张" View:self.view];
-    }else if (!lowHouseListModel.户型图){
+    }else if (!(lowHouseListModel.户型图.length>0)){
         [BaseView _init:@"请选择户型图" View:self.view];
     }else if ([NetworkManager address:lowHouseListModel.户型图].count<2||[NetworkManager address:lowHouseListModel.户型图].count>6){
         [BaseView _init:@"户型图2-5张" View:self.view];
-    }else if (!lowHouseListModel.景观图){
+    }else if (!(lowHouseListModel.景观图.length>0)){
         [BaseView _init:@"请选择景观图" View:self.view];
     }else if ([NetworkManager address:lowHouseListModel.景观图].count<2||[NetworkManager address:lowHouseListModel.景观图].count>6){
         [BaseView _init:@"景观图2-5张" View:self.view];

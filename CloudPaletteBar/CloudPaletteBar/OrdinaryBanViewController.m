@@ -709,14 +709,22 @@ static NSString *Identifier12=@"Identifier12";
 //判断必填项
 -(void)required{
     //    把位置信息转成字符串付给对象属性
+    __block int count1 = 0;
     oBanListModel.梯位户数比=[NetworkManager Datastrings:addressArray1];
+    [addressArray1 enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        count1 ++ ;
+        if ([obj isEqual:@""]) {
+            count1--;
+        }
+    }];
+
     if (_noInvestigation==5){
         NSString *str = [super replaceString:oBanListModel.无法调查说明];
-        if (!oBanListModel.楼盘编号) {
+        if (!(oBanListModel.楼盘编号.length>0)) {
             [BaseView _init:@"请选择楼盘" View:self.view];
-        }else if (!oBanListModel.楼栋编号){
+        }else if (!(oBanListModel.楼栋编号.length>0)){
             [BaseView _init:@"请选择楼栋名称" View:self.view];
-        }else if (!oBanListModel.实际楼栋名称){
+        }else if (!(oBanListModel.实际楼栋名称.length>0)){
             [BaseView _init:@"请输入实际楼栋名称" View:self.view];
         }else if ([str isEqualToString:@""]){
             [BaseView _init:@"请输入无法调查说明" View:self.view];
@@ -724,16 +732,16 @@ static NSString *Identifier12=@"Identifier12";
             [self netSaveFormData];
         }
     }else{
-        if (!oBanListModel.楼盘编号) {
+        if (!(oBanListModel.楼盘编号.length>0)) {
             [BaseView _init:@"请选择楼盘" View:self.view];
-        }else if (!oBanListModel.楼栋编号){
+        }else if (!(oBanListModel.楼栋编号.length>0)){
             [BaseView _init:@"请选择楼栋名称" View:self.view];
-        }else if (!oBanListModel.实际楼栋名称){
+        }else if (!(oBanListModel.实际楼栋名称.length>0)){
             [BaseView _init:@"请输入实际楼栋名称" View:self.view];
-        }else if (addressArray1.count<3){
+        }else if (count1 != 3){
             [BaseView _init:@"请输入完整的梯位户数量" View:self.view];
-        }else if (!oBanListModel.每层价格相差){
-            [BaseView _init:@"请输入每层价格相差" View:self.view];
+        }else if (!(oBanListModel.楼层差价.length>0)){
+            [BaseView _init:@"请输入楼层差价" View:self.view];
         }else{
             [self netSaveFormData];
         }

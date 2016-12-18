@@ -148,7 +148,7 @@ static NSString *Identifier22=@"Identifier22";
         if (systemModel) {
             if ([systemModel.status isEqualToString:@"1"]) {
                 for (SystemListModel *systemListModel in systemModel.list) {
-                    [ Arraykeys addObject:[NSString stringWithFormat:@"%@ %@",systemListModel.系统楼盘名称,systemListModel.楼栋名称]];
+                    [ Arraykeys addObject:[NSString stringWithFormat:@"%@ %@",systemListModel.系统楼盘名称,[super replaceString:systemListModel.楼栋名称]]];
                     [ Arrayvalues addObject:systemListModel.系统楼盘编号];
                 }
                     formSelectTableView.formSelectArray=Arrayvalues;
@@ -1356,47 +1356,47 @@ static NSString *Identifier22=@"Identifier22";
         }
     }];
 
-    if(!lowEstateListModel.实际楼盘名称){
+    if(!(lowEstateListModel.实际楼盘名称.length>0)){
         [BaseView _init:@"请输入实际楼盘名称" View:self.view];
     }else if(count1!=3&&count2!=3){
         [BaseView _init:@"请输入任意一个完整的地理位置信息" View:self.view];
-    }else if(!lowEstateListModel.物管公司){
+    }else if(!(lowEstateListModel.物管公司.length>0)){
         [BaseView _init:@"请输入物管公司" View:self.view];
-    }else if(!lowEstateListModel.容积率){
+    }else if(!(lowEstateListModel.容积率.length>0)){
         [BaseView _init:@"请输入容积率" View:self.view];
-    }else if(!lowEstateListModel.景观设施){
+    }else if(!(lowEstateListModel.景观设施.length>0)){
         [BaseView _init:@"请选择景观设施" View:self.view];
-    }else if(!lowEstateListModel.商业配套){
+    }else if(!(lowEstateListModel.商业配套.length>0)){
         [BaseView _init:@"请选择商业配套" View:self.view];
-    }else if(!lowEstateListModel.公共车位){
+    }else if(!(lowEstateListModel.公共车位.length>0)){
         [BaseView _init:@"请输入公共车位" View:self.view];
-    }else if(!lowEstateListModel.运动设施){
+    }else if(!(lowEstateListModel.运动设施.length>0)){
         [BaseView _init:@"请选择运动设施" View:self.view];
-    }else if([lowEstateListModel.海滨别墅 isEqualToString:@"有"]&&!lowEstateListModel.海滨名称){
+    }else if([lowEstateListModel.海滨别墅 isEqualToString:@"有"]&&!(lowEstateListModel.海滨名称.length>0)){
         [BaseView _init:@"请输入海滨名称" View:self.view];
-    }else if([lowEstateListModel.河流湖泊别墅 isEqualToString:@"有"]&&!lowEstateListModel.河流湖泊名称){
+    }else if([lowEstateListModel.河流湖泊别墅 isEqualToString:@"有"]&&!(lowEstateListModel.河流湖泊名称.length>0)){
         [BaseView _init:@"请输入河流湖泊名称" View:self.view];
-    }else if([lowEstateListModel.山景别墅 isEqualToString:@"有"]&&!lowEstateListModel.山景名称){
+    }else if([lowEstateListModel.山景别墅 isEqualToString:@"有"]&&!(lowEstateListModel.山景名称.length>0)){
         [BaseView _init:@"请输入山景名称" View:self.view];
-    }else if([lowEstateListModel.城市核心区别墅 isEqualToString:@"有"]&&!lowEstateListModel.城市核心区名称){
+    }else if([lowEstateListModel.城市核心区别墅 isEqualToString:@"有"]&&!(lowEstateListModel.城市核心区名称.length>0)){
         [BaseView _init:@"请输入城市核心区名称" View:self.view];
-    }else if([lowEstateListModel.公园别墅 isEqualToString:@"有"]&&!lowEstateListModel.公园名称){
+    }else if([lowEstateListModel.公园别墅 isEqualToString:@"有"]&&!(lowEstateListModel.公园名称.length>0)){
         [BaseView _init:@"请输入公园名称" View:self.view];
-    }else if([lowEstateListModel.高尔夫别墅 isEqualToString:@"有"]&&!lowEstateListModel.高尔夫名称){
+    }else if([lowEstateListModel.高尔夫别墅 isEqualToString:@"有"]&&!(lowEstateListModel.高尔夫名称.length>0)){
         [BaseView _init:@"请输入高尔夫名称" View:self.view];
-    }else if(!lowEstateListModel.楼盘效果图){
+    }else if(!(lowEstateListModel.楼盘效果图.length>0)){
         [BaseView _init:@"请选择楼盘效果图" View:self.view];
     }else if ([NetworkManager address:lowEstateListModel.楼盘效果图].count>1){
         [BaseView _init:@"楼盘效果图1张" View:self.view];
-    }else if(!lowEstateListModel.楼盘平面图){
+    }else if(!(lowEstateListModel.楼盘平面图.length>0)){
         [BaseView _init:@"请选择楼盘平面图" View:self.view];
     }else if ([NetworkManager address:lowEstateListModel.楼盘平面图].count>1){
         [BaseView _init:@"楼盘平面图1张" View:self.view];
-    }else if(!lowEstateListModel.配套设施图){
+    }else if(!(lowEstateListModel.配套设施图.length>0)){
         [BaseView _init:@"请选择配套设施图" View:self.view];
     }else if ([NetworkManager address:lowEstateListModel.配套设施图].count<2||[NetworkManager address:lowEstateListModel.配套设施图].count>6){
         [BaseView _init:@"配套设施图2-5张" View:self.view];
-    }else if(!lowEstateListModel.内外部景观图){
+    }else if(!(lowEstateListModel.内外部景观图.length>0)){
         [BaseView _init:@"请选择内外部景观图" View:self.view];
     }else if ([NetworkManager address:lowEstateListModel.内外部景观图].count<2||[NetworkManager address:lowEstateListModel.内外部景观图].count>6){
         [BaseView _init:@"内外部景观图2-5张" View:self.view];

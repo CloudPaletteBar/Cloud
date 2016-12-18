@@ -65,6 +65,9 @@ static NSString *Identifier20=@"Identifier20";
     NSString *bangongLouPan;
     NSString *secarchName;
     UIView *formSelectView;
+    
+    NSString *time1;
+    NSString *time2;
 }
 @property(nonatomic,strong)CalendarView *calendarView;
 @property(nonatomic,strong)NSMutableArray *lowArray;
@@ -764,26 +767,27 @@ static NSString *Identifier20=@"Identifier20";
                 lowSelectDateView.titleTextField.text=[NetworkManager str:dateStr];
            
         };
-//        lowSelectDateView.titleTextField.text=@"";
         if (section==27) {
-//            if (!officeHouseListModel.审核时间) {
-//                NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
-//                [formatter setDateFormat:@"yyyy.MM.dd"];
-//                officeHouseListModel.审核时间=[formatter stringFromDate:[NSDate date]];
-//                
-//            }interceptStrFrom
-            if (officeHouseListModel.租约){
+            if (officeHouseListModel.租约.length>1){
                 lowSelectDateView.titleTextField.text=[NetworkManager interceptStrTo:officeHouseListModel.租约 PleStr:@","];
+            }else{
+                NSDate *currentDate = [NSDate date];//获取当前时间，日期
+                NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+                [dateFormatter setDateFormat:@"YYYY.MM.dd"];
+                time1 = [dateFormatter stringFromDate:currentDate];
+                lowSelectDateView.titleTextField.text = time1;
             }
             
         }else if(section==28){
-//            if (!officeHouseListModel.调查时间) {
-//                NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
-//                [formatter setDateFormat:@"yyyy.MM.dd"];
-//                officeHouseListModel.调查时间=[formatter stringFromDate:[NSDate date]];
-//            }
-            if (officeHouseListModel.租约){
-                lowSelectDateView.titleTextField.text=[NetworkManager interceptStrTo:officeHouseListModel.租约 PleStr:@","];
+            if (officeHouseListModel.租约.length>1){
+                NSArray *array = [officeHouseListModel.租约 componentsSeparatedByString:@","];
+                lowSelectDateView.titleTextField.text=[array objectAtIndex:1];
+            }else{
+                NSDate *currentDate = [NSDate date];//获取当前时间，日期
+                NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+                [dateFormatter setDateFormat:@"YYYY.MM.dd"];
+                time2 = [dateFormatter stringFromDate:currentDate];
+                lowSelectDateView.titleTextField.text = time2;
             }
         }
 
@@ -1028,10 +1032,9 @@ static NSString *Identifier20=@"Identifier20";
     }else if (textField.tag==1025){
         officeHouseListModel.租金=textField.text;
     }else if (textField.tag==1027){
-        
-        officeHouseListModel.租约=[NSString stringWithFormat:@"%@,%@",textField.text,officeHouseListModel.租约];
+        time1 = textField.text;
     }else if (textField.tag==1028){
-        officeHouseListModel.租约=[NSString stringWithFormat:@"%@,%@",officeHouseListModel.租约,textField.text];
+        time2 = textField.text;
     }else if (textField.tag==1030){
         officeHouseListModel.售价=textField.text;
     }else if (textField.tag==1032){
@@ -1094,6 +1097,7 @@ static NSString *Identifier20=@"Identifier20";
 
 //判断必填项
 -(void)required{
+    officeHouseListModel.租约=[NSString stringWithFormat:@"%@,%@",time1,time2];
     officeHouseListModel.朝向=[NetworkManager Datastrings:[officeHouseOrientationModel.toDictionary allValues]];
     if (!(officeHouseListModel.楼栋编号.length>0)) {
         [BaseView _init:@"请选择楼栋名称" View:self.view];

@@ -139,7 +139,7 @@ static NSString *Identifier20=@"Identifier20";
         if (systemModel) {
             if ([systemModel.status isEqualToString:@"1"]) {
                 for (SystemListModel *systemListModel in systemModel.list) {
-                    [ Arraykeys addObject:[NSString stringWithFormat:@"%@ %@",systemListModel.系统楼盘名称,systemListModel.楼栋名称]];
+                    [ Arraykeys addObject:[NSString stringWithFormat:@"%@ %@",systemListModel.系统楼盘名称,[super replaceString:systemListModel.楼栋名称]]];
                     [ Arrayvalues addObject:systemListModel.系统楼盘编号];
                 }
                 if (formSelectTableView.TagT==1004) {
@@ -1502,39 +1502,39 @@ static NSString *Identifier20=@"Identifier20";
             count2--;
         }
     }];
-    if (!oEstateListModel.实际楼盘名称){
+    if (!(oEstateListModel.实际楼盘名称.length>0)){
         [BaseView _init:@"请输入实际楼盘名称" View:self.view];
     }else if (count1!=3&&count2!=3){
         [BaseView _init:@"请输入任意一个完整的地理位置信息" View:self.view];
-    }else if (!oEstateListModel.物业公司){
+    }else if (!(oEstateListModel.物业公司.length>0)){
         [BaseView _init:@"请输入物业公司" View:self.view];
-    }else if (!oEstateListModel.楼栋平面图){
+    }else if (!(oEstateListModel.楼栋平面图.length>0)){
         [BaseView _init:@"请选择楼栋平面图" View:self.view];
     }else if ([NetworkManager address:oEstateListModel.楼栋平面图].count>1){
         [BaseView _init:@"楼栋平面图1张" View:self.view];
-    }else if (!oEstateListModel.楼盘外观照片){
+    }else if (!(oEstateListModel.楼盘外观照片.length>0)){
         [BaseView _init:@"请选择楼盘外观照片" View:self.view];
     }else if ([NetworkManager address:oEstateListModel.楼盘外观照片].count<2){
         [BaseView _init:@"楼盘外观照片2-5张" View:self.view];
-    }else if ([oEstateListModel.托儿所 isEqualToString:@"有"]&&!oEstateListModel.托儿所名称){
+    }else if ([oEstateListModel.托儿所 isEqualToString:@"有"]&&!(oEstateListModel.托儿所名称.length>0)){
         [BaseView _init:@"请输入托儿所名称" View:self.view];
-    }else if ([oEstateListModel.幼儿园 isEqualToString:@"有"]&&!oEstateListModel.幼儿园名称){
+    }else if ([oEstateListModel.幼儿园 isEqualToString:@"有"]&&!(oEstateListModel.幼儿园名称.length>0)){
         [BaseView _init:@"请输入幼儿园名称" View:self.view];
-    }else if ([oEstateListModel.小学 isEqualToString:@"有"]&&!oEstateListModel.小学名称){
+    }else if ([oEstateListModel.小学 isEqualToString:@"有"]&&!(oEstateListModel.小学名称.length>0)){
         [BaseView _init:@"请输入小学名称" View:self.view];
-    }else if ([oEstateListModel.中学 isEqualToString:@"有"]&&!oEstateListModel.中学名称){
+    }else if ([oEstateListModel.中学 isEqualToString:@"有"]&&!(oEstateListModel.中学名称.length>0)){
         [BaseView _init:@"请输入中学名称" View:self.view];
-    }else if ([oEstateListModel.海滨 isEqualToString:@"有"]&&!oEstateListModel.海滨名称){
+    }else if ([oEstateListModel.海滨 isEqualToString:@"有"]&&!(oEstateListModel.海滨名称.length>0)){
         [BaseView _init:@"请输入海滨名称" View:self.view];
-    }else if ([oEstateListModel.河流湖泊 isEqualToString:@"有"]&&!oEstateListModel.河流湖泊名称){
+    }else if ([oEstateListModel.河流湖泊 isEqualToString:@"有"]&&!(oEstateListModel.河流湖泊名称.length>0)){
         [BaseView _init:@"请输入河流湖泊名称" View:self.view];
-    }else if ([oEstateListModel.山景 isEqualToString:@"有"]&&!oEstateListModel.山景名称){
+    }else if ([oEstateListModel.山景 isEqualToString:@"有"]&&!(oEstateListModel.山景名称.length>0)){
         [BaseView _init:@"请输入山景名称" View:self.view];
-    }else if ([oEstateListModel.人文景观广场 isEqualToString:@"有"]&&!oEstateListModel.人文景观广场名称){
+    }else if ([oEstateListModel.人文景观广场 isEqualToString:@"有"]&&!(oEstateListModel.人文景观广场名称.length>0)){
         [BaseView _init:@"请输入人文景观广场名称" View:self.view];
-    }else if ([oEstateListModel.公园 isEqualToString:@"有"]&&!oEstateListModel.公园名称){
+    }else if ([oEstateListModel.公园 isEqualToString:@"有"]&&!(oEstateListModel.公园名称.length>0)){
         [BaseView _init:@"请输入公园名称" View:self.view];
-    }else if ([oEstateListModel.高尔夫球场 isEqualToString:@"有"]&&!oEstateListModel.高尔夫球场名称){
+    }else if ([oEstateListModel.高尔夫球场 isEqualToString:@"有"]&&!(oEstateListModel.高尔夫球场名称.length>0)){
         [BaseView _init:@"请输入高尔夫球场名称" View:self.view];
     }else{
         [self netSaveFormData];

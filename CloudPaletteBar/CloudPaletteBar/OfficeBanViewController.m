@@ -1389,7 +1389,7 @@ static NSString *Identifier20=@"Identifier20";
                 [BaseView _init:saveModel.message View:SelfWeek.view];
                 officeBanListModel.ID = saveModel.ID;
                 if (![self.selectSee isEqualToString:@"编辑"]) {
-                    [SelfWeek postValues:@{@"ID":[super replaceString:officeBanListModel.楼栋编号],@"NAME":officeBanListModel.实际楼栋名称,@"楼盘名称":officeBanListModel.楼盘名称}];
+                    [SelfWeek postValues:@{@"ID":[super replaceString:officeBanListModel.楼栋编号],@"NAME":[super replaceString:officeBanListModel.实际楼栋名称],@"楼盘名称":[super replaceString:officeBanListModel.楼盘名称]}];
                     
                     UIScrollView *scrollView=(UIScrollView *)self.view.superview;
                     [scrollView setContentOffset:CGPointMake(2*self.view.frame.size.width, 0) animated:YES];

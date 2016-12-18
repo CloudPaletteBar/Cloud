@@ -714,15 +714,15 @@ static NSString *Identifier12=@"Identifier12";
 -(void)required{
     oHouseListModel.朝向=[NetworkManager Datastrings:[oHouseOModel.toDictionary allValues]];
     oHouseListModel.户型=[NetworkManager Datastrings:[oHouseAModel.toDictionary allValues]];
-    if (!oHouseListModel.楼栋编号) {
+    if (!(oHouseListModel.楼栋编号.length>0)) {
         [BaseView _init:@"请选择楼栋名称" View:self.view];
-    }else if (!oHouseListModel.现用房号){
+    }else if (!(oHouseListModel.现用房号.length>0)){
         [BaseView _init:@"请输入现用房号" View:self.view];
-    }else if (!oHouseListModel.楼层范围){
+    }else if (!(oHouseListModel.楼层范围.length>0)){
         [BaseView _init:@"请输入楼层范围" View:self.view];
-    }else if (!oHouseListModel.朝向){
+    }else if (!(oHouseListModel.朝向.length>0)){
         [BaseView _init:@"请选择朝向" View:self.view];
-    }else if (!oHouseListModel.户型){
+    }else if (!(oHouseListModel.户型.length>0)){
         [BaseView _init:@"请选择户型" View:self.view];
     }else{
         [self netSaveFormData];
