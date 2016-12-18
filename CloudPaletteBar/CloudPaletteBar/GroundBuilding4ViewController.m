@@ -323,7 +323,7 @@
                         [Arrayvalues addObject:systemListModel.楼栋编号];
                         [ArrayZongdi addObject:systemListModel.楼层];
                     }
-                    formSelectTableView.formSelectArray=Arraykeys;
+                    formSelectTableView.formSelectArray=ArrayAll;
                 }
             }
             

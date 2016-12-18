@@ -200,6 +200,7 @@
     textField1.text = [[sender object] objectForKey:@"实际楼盘名称"];
     
     groundBuildingListModel.工业楼盘名称 = textField1.text;
+    groundBuildingListModel.工业楼盘ID = [[sender object] objectForKey:@"工业楼盘ID"];
     groundBuildingListModel.宗地号 = [[sender object] objectForKey:@"宗地号"];
 }
 

@@ -377,7 +377,7 @@
                 [kUserDefaults setObject:saveModel.ID forKey:@"industryId"];
                 groundBuildingListModel.ID = saveModel.ID;
                 if ([look isEqualToString:@"工业新增"]) {
-                    [[NSNotificationCenter defaultCenter] postNotificationName:@"gongYelouPanTolouDong" object:@{@"宗地号":[super replaceString:groundBuildingListModel.宗地号],@"实际楼盘名称":[super replaceString:textField4.text]}];
+                    [[NSNotificationCenter defaultCenter] postNotificationName:@"gongYelouPanTolouDong" object:@{@"宗地号":[super replaceString:groundBuildingListModel.宗地号],@"实际楼盘名称":[super replaceString:textField4.text],@"工业楼盘ID":[super replaceString:saveModel.ID]}];
                     
                     UIScrollView *scrollView=(UIScrollView *)self.view.superview;
                     CGFloat offsetX = scrollView.contentOffset.x + scrollView.frame.size.width;
