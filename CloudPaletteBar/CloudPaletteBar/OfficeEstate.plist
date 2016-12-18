@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>查勘人</key>
+		<array/>
+	</dict>
+	<dict>
+		<key>查勘日期</key>
+		<array/>
+	</dict>
+	<dict>
+		<key>系统楼盘编号</key>
+		<array/>
+	</dict>
+	<dict>
+		<key>系统楼盘名称</key>
+		<array/>
+	</dict>
+	<dict>
+		<key>实际楼盘名称</key>
+		<array/>
+	</dict>
+	<dict>
+		<key>楼盘别名</key>
+		<array/>
+	</dict>
+	<dict>
+		<key>地理位置1</key>
+		<array/>
+	</dict>
+	<dict>
+		<key>地理位置2</key>
+		<array/>
+	</dict>
+	<dict>
+		<key>交通便利程度</key>
+		<array/>
+	</dict>
+	<dict>
+		<key>总楼栋数(栋)</key>
+		<array/>
+	</dict>
+	<dict>
+		<key>开发商</key>
+		<array/>
+	</dict>
+	<dict>
+		<key>备注</key>
+		<array/>
+	</dict>
+</array>
+</plist>

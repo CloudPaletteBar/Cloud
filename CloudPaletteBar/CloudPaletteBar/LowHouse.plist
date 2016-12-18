@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>楼栋编号</key>
+		<array/>
+	</dict>
+	<dict>
+		<key>楼栋名称</key>
+		<array/>
+	</dict>
+	<dict>
+		<key>房屋编号</key>
+		<array/>
+	</dict>
+	<dict>
+		<key>系统房号</key>
+		<array/>
+	</dict>
+	<dict>
+		<key>现用房号</key>
+		<array/>
+	</dict>
+	<dict>
+		<key>所在楼层</key>
+		<array/>
+	</dict>
+	<dict>
+		<key>建筑面积</key>
+		<array/>
+	</dict>
+	<dict>
+		<key>实用面积</key>
+		<array/>
+	</dict>
+	<dict>
+		<key>物业管理费</key>
+		<array/>
+	</dict>
+	<dict>
+		<key>南+东</key>
+		<array/>
+	</dict>
+	<dict>
+		<key>西+北</key>
+		<array/>
+	</dict>
+	<dict>
+		<key>东南+东北</key>
+		<array/>
+	</dict>
+	<dict>
+		<key>西南+西北</key>
+		<array/>
+	</dict>
+	<dict>
+		<key>采光         </key>
+		<array/>
+	</dict>
+	<dict>
+		<key>通风         </key>
+		<array/>
+	</dict>
+	<dict>
+		<key>连排别墅 </key>
+		<array/>
+	</dict>
+	<dict>
+		<key>叠墅/洋房</key>
+		<array/>
+	</dict>
+	<dict>
+		<key>装修程度</key>
+		<array/>
+	</dict>
+	<dict>
+		<key>房+厅</key>
+		<array/>
+	</dict>
+	<dict>
+		<key>厨卫+阳台</key>
+		<array/>
+	</dict>
+	<dict>
+		<key>花园+</key>
+		<array/>
+	</dict>
+	<dict>
+		<key>价格</key>
+		<array/>
+	</dict>
+	<dict>
+		<key>阁楼                             </key>
+		<array>
+			<string>阁楼面积(m²)</string>
+		</array>
+	</dict>
+	<dict>
+		<key>挑高阳台面积              </key>
+		<array>
+			<string>挑高阳台面积+m²</string>
+		</array>
+	</dict>
+	<dict>
+		<key>露台空中花园              </key>
+		<array>
+			<string>露台面积(m²)</string>
+		</array>
+	</dict>
+	<dict>
+		<key>私家花园庭院              </key>
+		<array>
+			<string>私家花园面积(m²)</string>
+		</array>
+	</dict>
+	<dict>
+		<key>私家车位车库              </key>
+		<array>
+			<string>私家车位个数(个)</string>
+		</array>
+	</dict>
+	<dict>
+		<key>私家泳池                     </key>
+		<array>
+			<string>私家泳池个数(个)</string>
+		</array>
+	</dict>
+	<dict>
+		<key>中央空调                     </key>
+		<array>
+			<string>中央空调个数(个)</string>
+		</array>
+	</dict>
+	<dict>
+		<key>电梯                             </key>
+		<array>
+			<string>电梯个数(个)</string>
+		</array>
+	</dict>
+	<dict>
+		<key>总赠送面积</key>
+		<array/>
+	</dict>
+	<dict>
+		<key>赠送其它</key>
+		<array/>
+	</dict>
+	<dict>
+		<key>海景           </key>
+		<array/>
+	</dict>
+	<dict>
+		<key>河流湖泊    </key>
+		<array/>
+	</dict>
+	<dict>
+		<key>山景           </key>
+		<array/>
+	</dict>
+	<dict>
+		<key>人文景观    </key>
+		<array/>
+	</dict>
+	<dict>
+		<key>公园           </key>
+		<array/>
+	</dict>
+	<dict>
+		<key>高尔夫景观</key>
+		<array/>
+	</dict>
+	<dict>
+		<key>楼栋外观图</key>
+		<array/>
+	</dict>
+	<dict>
+		<key>户型图</key>
+		<array/>
+	</dict>
+	<dict>
+		<key>景观图</key>
+		<array/>
+	</dict>
+	<dict>
+		<key>备注</key>
+		<array/>
+	</dict>
+</array>
+</plist>

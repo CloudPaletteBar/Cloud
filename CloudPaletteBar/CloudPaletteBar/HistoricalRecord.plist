@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+        <key>tradeLoupan</key>
+        <string>商业楼盘</string>
+        <key>tradeBuding</key>
+        <string>商业楼栋</string>
+        <key>tradeLouceng</key>
+        <string>商业楼层</string>
+        <key>tradeShangpu</key>
+        <string>商业商铺</string>
+        <key>officeLoupan</key>
+        <string>办公楼盘</string>
+        <key>officeBuding</key>
+        <string>办公楼栋</string>
+        <key>officeFangwu</key>
+        <string>办公房屋</string>
+        <key>industryZongdi</key>
+        <string>工业宗地</string>
+        <key>industryGongyeyuan</key>
+        <string>工业园</string>
+        <key>industryLoupan</key>
+        <string>工业楼盘</string>
+        <key>industryBuding</key>
+        <string>工业楼栋</string>
+        <key>industryLouceng</key>
+        <string>工业楼层</string>
+        <key>industryFangwu</key>
+        <string>工业房屋</string>
+        <key>houseXiaoqu</key>
+        <string>低密度住宅楼盘</string>
+        <key>houseBuding</key>
+        <string>低密度住宅楼栋</string>
+        <key>houseFangwu</key>
+        <string>低密度住宅房屋</string>
+        <key>houseDLoupan</key>
+        <string>普通住宅楼盘</string>
+        <key>houseDBuding</key>
+        <string>普通住宅楼栋</string>
+        <key>houseDFangwu</key>
+        <string>普通住宅房屋</string>
+
+	</dict>
+</array>
+</plist>

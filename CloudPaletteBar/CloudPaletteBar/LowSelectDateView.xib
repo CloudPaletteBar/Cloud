@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="LowSelectDateView">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EYw-gI-77X">
+                    <rect key="frame" x="8" y="11" width="140" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="140" id="cT1-97-c9V"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="icon_xiala_Image" translatesAutoresizingMaskIntoConstraints="NO" id="hKM-JB-9aa">
+                    <rect key="frame" x="280" y="12" width="20" height="20"/>
+                </imageView>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kvE-ab-kNg">
+                    <rect key="frame" x="156" y="4" width="156" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="35" id="UVh-4A-cTs"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="0.5"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="5"/>
+                        <userDefinedRuntimeAttribute type="color" keyPath="layer.borderUIColor">
+                            <color key="value" red="0.64313725490196072" green="0.64313725490196072" blue="0.64313725490196072" alpha="0.55000000000000004" colorSpace="calibratedRGB"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </textField>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="EYw-gI-77X" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="3AU-Vh-rJc"/>
+                <constraint firstItem="EYw-gI-77X" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="78R-qo-2Mw"/>
+                <constraint firstItem="kvE-ab-kNg" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="7uc-f9-vJf"/>
+                <constraint firstItem="kvE-ab-kNg" firstAttribute="leading" secondItem="EYw-gI-77X" secondAttribute="trailing" constant="8" id="FLj-ij-43U"/>
+                <constraint firstAttribute="trailing" secondItem="kvE-ab-kNg" secondAttribute="trailing" constant="8" id="HjM-MT-jQU"/>
+                <constraint firstAttribute="trailing" secondItem="hKM-JB-9aa" secondAttribute="trailing" constant="20" id="mvq-O6-9xU"/>
+                <constraint firstItem="hKM-JB-9aa" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="rRg-WA-Vh3"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="selectDateLable" destination="EYw-gI-77X" id="Iyg-8I-hkJ"/>
+                <outlet property="titleTextField" destination="kvE-ab-kNg" id="LBY-ah-IHy"/>
+            </connections>
+            <point key="canvasLocation" x="335" y="116"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="icon_xiala_Image" width="8" height="4"/>
+    </resources>
+</document>

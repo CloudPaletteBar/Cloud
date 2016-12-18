@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="ShopsViewTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zJy-wO-SF2">
+                        <rect key="frame" x="88" y="0.0" width="232" height="43"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="43" id="KOb-T4-AWg"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bfx-t7-qGw">
+                        <rect key="frame" x="0.0" y="0.0" width="44" height="43"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="43" id="Q8i-tc-UFP"/>
+                            <constraint firstAttribute="width" constant="44" id="uqs-cb-eFZ"/>
+                        </constraints>
+                        <state key="normal" image="图层-11-副本-10"/>
+                        <state key="selected" image="图层-10-副本"/>
+                        <connections>
+                            <action selector="select:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Jal-s8-tfy"/>
+                        </connections>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EWU-fW-Kxr">
+                        <rect key="frame" x="45" y="0.0" width="42" height="43"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="42" id="6Mv-tx-h34"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="zJy-wO-SF2" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="GS8-qA-5EK"/>
+                    <constraint firstItem="EWU-fW-Kxr" firstAttribute="baseline" secondItem="zJy-wO-SF2" secondAttribute="baseline" id="Gh0-2y-OPt"/>
+                    <constraint firstAttribute="trailing" secondItem="zJy-wO-SF2" secondAttribute="trailing" id="HTa-6B-Gwq"/>
+                    <constraint firstItem="bfx-t7-qGw" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="OO5-Mj-uhj"/>
+                    <constraint firstAttribute="bottom" secondItem="zJy-wO-SF2" secondAttribute="bottom" id="Sfw-yd-t1t"/>
+                    <constraint firstItem="EWU-fW-Kxr" firstAttribute="firstBaseline" secondItem="zJy-wO-SF2" secondAttribute="firstBaseline" id="TOg-Wi-qQb"/>
+                    <constraint firstItem="bfx-t7-qGw" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="jhW-o0-Q3t"/>
+                    <constraint firstAttribute="bottom" secondItem="bfx-t7-qGw" secondAttribute="bottom" id="ktg-3W-JbB"/>
+                    <constraint firstItem="EWU-fW-Kxr" firstAttribute="leading" secondItem="bfx-t7-qGw" secondAttribute="trailing" constant="1" id="xqi-rC-F1R"/>
+                    <constraint firstItem="zJy-wO-SF2" firstAttribute="leading" secondItem="EWU-fW-Kxr" secondAttribute="trailing" constant="1" id="ypL-lM-ktY"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="idLabel" destination="EWU-fW-Kxr" id="mMK-X4-w1e"/>
+                <outlet property="selectButton" destination="bfx-t7-qGw" id="qwf-0r-nK7"/>
+                <outlet property="titleLabel" destination="zJy-wO-SF2" id="KRx-9E-Q91"/>
+            </connections>
+            <point key="canvasLocation" x="417" y="243"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="图层-10-副本" width="20" height="20"/>
+        <image name="图层-11-副本-10" width="21" height="21"/>
+    </resources>
+</document>

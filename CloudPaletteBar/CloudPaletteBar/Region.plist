@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<string>办公类型_房屋表</string>
+	<string>办公类型_楼栋表</string>
+	<string>办公类型_楼盘表</string>
+	<string>工业类型_房屋表</string>
+	<string>工业类型_工业园表</string>
+	<string>工业类型_楼层表</string>
+	<string>工业类型_楼栋表</string>
+	<string>工业类型_楼盘表</string>
+	<string>工业类型_宗地表</string>
+	<string>普通住宅_房屋表</string>
+	<string>普通住宅_楼栋表</string>
+	<string>普通住宅_楼盘表</string>
+	<string>商业类型_楼层表</string>
+	<string>商业类型_楼栋表</string>
+	<string>商业类型_楼盘表</string>
+	<string>商业类型_商铺表</string>
+	<string>住宅类型_房屋表</string>
+	<string>住宅类型_楼栋表</string>
+	<string>住宅类型_小区表</string>
+</array>
+</plist>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<string>所有</string>
+	<string>罗湖</string>
+	<string>福田</string>
+	<string>南山</string>
+	<string>龙华新区</string>
+	<string>龙岗</string>
+	<string>宝安</string>
+	<string>盐田</string>
+	<string>坪山新区</string>
+	<string>光明新区</string>
+	<string>大鹏新区</string>
+</array>
+</plist>

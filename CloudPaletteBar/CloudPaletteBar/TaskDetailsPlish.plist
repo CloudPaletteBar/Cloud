@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<string>任务名称</string>
+	<string>优先级别</string>
+	<string>项目类型</string>
+	<string>开始时间</string>
+	<string>结束时间</string>
+	<string>调查公司</string>
+	<string>任务条数</string>
+	<string>任务类型</string>
+	<string>处理状态</string>
+	<string>完成情况</string>
+</array>
+</plist>

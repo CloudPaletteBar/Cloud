@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="U6b-Vx-4bR">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="259"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CLOUD_image" translatesAutoresizingMaskIntoConstraints="NO" id="emN-bW-vPc">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="259"/>
+                </imageView>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="emN-bW-vPc" secondAttribute="trailing" id="HuR-kX-aPG"/>
+                <constraint firstItem="emN-bW-vPc" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" id="MIQ-5R-jGF"/>
+                <constraint firstAttribute="bottom" secondItem="emN-bW-vPc" secondAttribute="bottom" id="Waa-NR-GUx"/>
+                <constraint firstItem="emN-bW-vPc" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" id="q3x-Og-vUr"/>
+            </constraints>
+            <point key="canvasLocation" x="305" y="387.5"/>
+        </collectionReusableView>
+    </objects>
+    <resources>
+        <image name="CLOUD_image" width="320" height="231"/>
+    </resources>
+</document>

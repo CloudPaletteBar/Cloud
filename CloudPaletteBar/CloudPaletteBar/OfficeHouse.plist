@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>楼栋编号        </key>
+		<array/>
+	</dict>
+	<dict>
+		<key>楼栋名称        </key>
+		<array/>
+	</dict>
+	<dict>
+		<key>系统房号        </key>
+		<array/>
+	</dict>
+	<dict>
+		<key>系统楼层        </key>
+		<array/>
+	</dict>
+	<dict>
+		<key>系统建筑面积</key>
+		<array/>
+	</dict>
+	<dict>
+		<key>系统房屋用途</key>
+		<array/>
+	</dict>
+	<dict>
+		<key>系统对应情况</key>
+		<array/>
+	</dict>
+	<dict>
+		<key>所在楼层</key>
+		<array/>
+	</dict>
+	<dict>
+		<key>实际房号 </key>
+		<array/>
+	</dict>
+	<dict>
+		<key>是否临近电梯口</key>
+		<array/>
+	</dict>
+	<dict>
+		<key>装修情况           </key>
+		<array/>
+	</dict>
+	<dict>
+		<key>实用面积</key>
+		<array/>
+	</dict>
+	<dict>
+		<key>赠送面积</key>
+		<array/>
+	</dict>
+	<dict>
+		<key>南+东</key>
+		<array/>
+	</dict>
+	<dict>
+		<key>西+北</key>
+		<array/>
+	</dict>
+	<dict>
+		<key>东南+东北</key>
+		<array/>
+	</dict>
+	<dict>
+		<key>西南+西北</key>
+		<array/>
+	</dict>
+	<dict>
+		<key>采光面    </key>
+		<array/>
+	</dict>
+	<dict>
+		<key>采光评价</key>
+		<array/>
+	</dict>
+	<dict>
+		<key>特殊景观                     </key>
+		<array>
+			<string>景观名称</string>
+		</array>
+	</dict>
+	<dict>
+		<key>基本信息备注</key>
+		<array/>
+	</dict>
+	<dict>
+		<key>当前租户</key>
+		<array/>
+	</dict>
+	<dict>
+		<key>当前使用情况</key>
+		<array>
+			<string>当前使用情况其它</string>
+		</array>
+	</dict>
+	<dict>
+		<key>租户行业类别</key>
+		<array>
+			<string>租户行业类别其它</string>
+		</array>
+	</dict>
+	<dict>
+		<key>租户性质</key>
+		<array>
+			<string>租户性质其它</string>
+		</array>
+	</dict>
+	<dict>
+		<key>租金(元/m²/月)</key>
+		<array/>
+	</dict>
+	<dict>
+		<key>包含物业管理费          </key>
+		<array/>
+	</dict>
+	<dict>
+		<key>租约开始时间</key>
+		<array/>
+	</dict>
+	<dict>
+		<key>租约结束时间</key>
+		<array/>
+	</dict>
+	<dict>
+		<key>租约金信息来源</key>
+		<array>
+			<string>租约信息来源其它</string>
+		</array>
+	</dict>
+	<dict>
+		<key>售价(元/m²)</key>
+		<array/>
+	</dict>
+	<dict>
+		<key>售价信息来源    </key>
+		<array>
+			<string>售价信息来源其它</string>
+		</array>
+	</dict>
+	<dict>
+		<key>租售情况备注</key>
+		<array/>
+	</dict>
+	<dict>
+		<key>出入口门牌号照片</key>
+		<array/>
+	</dict>
+	<dict>
+		<key>房屋照片</key>
+		<array/>
+	</dict>
+</array>
+</plist>

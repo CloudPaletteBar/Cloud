@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>选择楼盘        </key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>楼栋编号        </key>
+		<array/>
+	</dict>
+	<dict>
+		<key>系统楼栋名称</key>
+		<array/>
+	</dict>
+	<dict>
+		<key>实际楼栋名称</key>
+		<array/>
+	</dict>
+	<dict>
+		<key>无法调查</key>
+		<array>
+			<string>无法调查说明</string>
+		</array>
+	</dict>
+	<dict>
+		<key>梯位户数比</key>
+		<array/>
+	</dict>
+	<dict>
+		<key>楼层差价</key>
+		<array/>
+	</dict>
+	<dict>
+		<key>每层价格相差</key>
+		<array/>
+	</dict>
+	<dict>
+		<key>备注</key>
+		<array/>
+	</dict>
+</array>
+</plist>
