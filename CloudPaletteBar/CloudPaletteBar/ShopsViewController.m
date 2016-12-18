@@ -1010,7 +1010,7 @@
     if (integerInt == 1000) {
         [dict setObject:@"local" forKey:@"dateType"];
         [dict setObject:@"tradeLouceng" forKey:@"makeType"];
-        [dict setObject:name forKey:@"floor"];
+        [dict setObject:name forKey:@"budingName"];
         if (self.taskID.length>1) {
             [dict setObject:self.taskID forKey:@"taskId"];
         }

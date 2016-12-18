@@ -939,8 +939,10 @@
         [BaseView _init:@"请输入实际楼栋名称" View:self.view];
     }else if (!(buildingListModel.物业管理公司.length>1)){
         [BaseView _init:@"请输入物业管理公司" View:self.view];
-//    }else if (addressArray1.count != 3){
-//        [BaseView _init:@"请输入完整的楼栋位置信息" View:self.view];
+    }else if (!(buildingListModel.地下层数.length>0)){
+        [BaseView _init:@"请输入楼栋地下层数" View:self.view];
+    }else if (!(buildingListModel.地上层数.length>0)){
+        [BaseView _init:@"请输入楼栋地上层数" View:self.view];
     }else if ([numberLabel.text intValue]*2 > typeArray2.count){
         [BaseView _init:@"请输入完整的商业层数" View:self.view];
     }else if ([NetworkManager address:buildingListModel.临街道照片].count>segmented.selectedSegmentIndex+1||[NetworkManager address:buildingListModel.临街道照片].count<segmented.selectedSegmentIndex+1){

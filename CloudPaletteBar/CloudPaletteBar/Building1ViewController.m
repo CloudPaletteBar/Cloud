@@ -291,7 +291,7 @@
         [BaseView _init:@"请输入任意一个完整的地理位置信息" View:self.view];
     }else if (!(buildingListModel.区位级别.length>0)){
         [BaseView _init:@"请输入区位级别" View:self.view];
-    }else if (price1<0 && price2<0){
+    }else if (price1<1 || price2<1){
         [BaseView _init:@"请输入完整的价格水平" View:self.view];
     }else if (!buildingListModel.楼栋位置图){
         [BaseView _init:@"请选择楼栋位置图" View:self.view];
@@ -585,8 +585,8 @@
                     [Arrayvalues removeAllObjects];
                 }
                 for (SystemListModel *systemListModel in systemModel.list) {
-                    [ Arraykeys addObject:[NSString stringWithFormat:@"%@ %@",systemListModel.系统楼盘名称,systemListModel.楼栋名称]];
-                    [ Arrayvalues addObject:systemListModel.系统楼盘编号];
+                    [Arraykeys addObject:[NSString stringWithFormat:@"%@ %@",[super replaceString:systemListModel.系统楼盘名称],[super replaceString:systemListModel.楼栋名称]]];
+                    [Arrayvalues addObject:systemListModel.系统楼盘编号];
                 }
                 formSelectTableView.formSelectArray=Arraykeys;
             }
