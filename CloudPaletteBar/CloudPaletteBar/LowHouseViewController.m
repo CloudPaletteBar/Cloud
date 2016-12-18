@@ -325,22 +325,22 @@ static NSString *Identifier20=@"Identifier20";
     
     if([self panduan:lowHouseListModel.阁楼 Baohan:@"有"])//_roaldSearchText
     {
-        [_lowArray replaceObjectAtIndex:22 withObject:@"YES"];
+        [_lowArray replaceObjectAtIndex:22 withObject:@"yes"];
     }
     if ([self panduan: lowHouseListModel.挑高阳台 Baohan:@"有"]) {
-        [_lowArray replaceObjectAtIndex:23 withObject:@"YES"];
+        [_lowArray replaceObjectAtIndex:23 withObject:@"yes"];
     }if ([self panduan: lowHouseListModel.露台空中花园 Baohan:@"有"]) {
-        [_lowArray replaceObjectAtIndex:24 withObject:@"YES"];
+        [_lowArray replaceObjectAtIndex:24 withObject:@"yes"];
     }if ([self panduan: lowHouseListModel.私家花园庭院 Baohan:@"有"]) {
-        [_lowArray replaceObjectAtIndex:25 withObject:@"YES"];
+        [_lowArray replaceObjectAtIndex:25 withObject:@"yes"];
     }if ([self panduan: lowHouseListModel.私家车位车库 Baohan:@"有"]) {
-        [_lowArray replaceObjectAtIndex:26 withObject:@"YES"];
+        [_lowArray replaceObjectAtIndex:26 withObject:@"yes"];
     }if ([self panduan: lowHouseListModel.私家泳池 Baohan:@"有"]) {
-        [_lowArray replaceObjectAtIndex:27 withObject:@"YES"];
+        [_lowArray replaceObjectAtIndex:27 withObject:@"yes"];
     }if ([self panduan: lowHouseListModel.中央空调 Baohan:@"有"]) {
-        [_lowArray replaceObjectAtIndex:28 withObject:@"YES"];
+        [_lowArray replaceObjectAtIndex:28 withObject:@"yes"];
     }if ([self panduan: lowHouseListModel.电梯 Baohan:@"有"]) {
-        [_lowArray replaceObjectAtIndex:29 withObject:@"YES"];
+        [_lowArray replaceObjectAtIndex:29 withObject:@"yes"];
     }
 }
 
@@ -768,7 +768,7 @@ static NSString *Identifier20=@"Identifier20";
         if (section==22) {
             [self Cselect_init:lowHouseListModel.阁楼 SelectView:houseSelectView];
         }else if (section==23){
-            [self Cselect_init:lowHouseListModel.挑高阳台面积 SelectView:houseSelectView];
+            [self Cselect_init:lowHouseListModel.挑高阳台 SelectView:houseSelectView];
         }else if (section==24){
             [self Cselect_init:lowHouseListModel.露台空中花园 SelectView:houseSelectView];
         }else if (section==25){

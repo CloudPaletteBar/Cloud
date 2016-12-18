@@ -339,7 +339,7 @@ static NSString *Identifier20=@"Identifier20";
    
     if([self panduan:officeBanListModel.主要用途 Baohan:@"其它"])//_roaldSearchText
     {
-        [_lowArray replaceObjectAtIndex:12 withObject:@"YES"];
+        [_lowArray replaceObjectAtIndex:13 withObject:@"YES"];
     }
     if ([self panduan: officeBanListModel.内部配套 Baohan:@"其它"]) {
         [_lowArray replaceObjectAtIndex:35 withObject:@"YES"];
@@ -395,7 +395,7 @@ static NSString *Identifier20=@"Identifier20";
     cell.cellTextField.text=@"";
     cell.cellTextField.tag=10000+indexPath.section;
     cell.cellTextField.delegate=self;
-    if (officeBanListModel.无法调查说明) {
+    if (officeBanListModel.无法调查说明.length!=0) {
         cell.cellTextField.text=officeBanListModel.无法调查说明;
     }else if (indexPath.section==9){
         cell.cellTextField.text=officeBanListModel.楼栋类型其它;

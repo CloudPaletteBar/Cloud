@@ -1174,26 +1174,40 @@ static NSString *Identifier20=@"Identifier20";
 }
 
 -(void)repleStr:(OEstateListModel *)RepleoEstateListModel{
-    if ([RepleoEstateListModel.托儿所 isEqualToString:@"有"]) {
+    if ([RepleoEstateListModel.商场 isEqualToString:@"有"]) {
+        [self reple:26];
+    }if ([RepleoEstateListModel.超市 isEqualToString:@"有"]) {
+        [self reple:27];
+    }if ([RepleoEstateListModel.社区医院 isEqualToString:@"有"]) {
+        [self reple:28];
+    }if ([RepleoEstateListModel.会所 isEqualToString:@"有"]) {
+        [self reple:29];
+    }if (RepleoEstateListModel.活动设施其它.length!=0  ) {
+        [self reple:32];
+    }if (RepleoEstateListModel.运动设施其它.length!=0 ) {
+        [self reple:37];
+    }if ([RepleoEstateListModel.托儿所 isEqualToString:@"有"]) {
         [self reple:38];
-    }else if([RepleoEstateListModel.幼儿园 isEqualToString:@"有"]){
+    }if([RepleoEstateListModel.幼儿园 isEqualToString:@"有"]){
         [self reple:39];
-    }else if([RepleoEstateListModel.小学 isEqualToString:@"有"]){
+    }if([RepleoEstateListModel.小学 isEqualToString:@"有"]){
         [self reple:40];
-    }else if([RepleoEstateListModel.中学 isEqualToString:@"有"]){
+    }if([RepleoEstateListModel.中学 isEqualToString:@"有"]){
         [self reple:41];
-    }else if([RepleoEstateListModel.海滨 isEqualToString:@"有"]){
+    }if([RepleoEstateListModel.海滨 isEqualToString:@"有"]){
         [self reple:43];
-    }else if([RepleoEstateListModel.河流湖泊 isEqualToString:@"有"]){
+    }if([RepleoEstateListModel.河流湖泊 isEqualToString:@"有"]){
         [self reple:44];
-    }else if([RepleoEstateListModel.山景 isEqualToString:@"有"]){
+    }if([RepleoEstateListModel.山景 isEqualToString:@"有"]){
         [self reple:45];
-    }else if([RepleoEstateListModel.人文景观广场 isEqualToString:@"有"]){
+    }if([RepleoEstateListModel.人文景观广场 isEqualToString:@"有"]){
         [self reple:46];
-    }else if([RepleoEstateListModel.公园 isEqualToString:@"有"]){
+    }if([RepleoEstateListModel.公园 isEqualToString:@"有"]){
         [self reple:47];
-    }else if([RepleoEstateListModel.高尔夫球场 isEqualToString:@"有"]){
+    }if([RepleoEstateListModel.高尔夫球场 isEqualToString:@"有"]){
         [self reple:48];
+    }if(RepleoEstateListModel.不利因素其它.length!=0){
+        [self reple:53];
     }
 }
 
