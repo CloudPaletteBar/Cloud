@@ -706,13 +706,13 @@ static NSString *Identifier12=@"Identifier12";
         }
     }];
 
-    if (!officeEstateListModel.实际楼盘名称){
+    if (!(officeEstateListModel.实际楼盘名称.length>0)){
         [BaseView _init:@"请输入实际楼盘名称" View:self.view];
     }else if (count1!=3&&count2!=3){
         [BaseView _init:@"请输入任意一个完整的地理位置信息" View:self.view];
     }else if (!officeEstateListModel.交通便利程度){
         [BaseView _init:@"请选择交通便利程度" View:self.view];
-    }else if (!officeEstateListModel.总楼栋数){
+    }else if (!(officeEstateListModel.总楼栋数.length>0)){
         [BaseView _init:@"请输入总楼栋数" View:self.view];
     }else{
         [self netSaveFormData];

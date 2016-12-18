@@ -1095,27 +1095,27 @@ static NSString *Identifier20=@"Identifier20";
 //判断必填项
 -(void)required{
     officeHouseListModel.朝向=[NetworkManager Datastrings:[officeHouseOrientationModel.toDictionary allValues]];
-    if (!officeHouseListModel.楼栋编号) {
+    if (!(officeHouseListModel.楼栋编号.length>0)) {
         [BaseView _init:@"请选择楼栋名称" View:self.view];
-    }else if (!officeHouseListModel.系统房号){
+    }else if (!(officeHouseListModel.系统房号.length>0)){
         [BaseView _init:@"请选择系统房号" View:self.view];
-    }else if (!officeHouseListModel.系统对应情况){
+    }else if (!(officeHouseListModel.系统对应情况.length>0)){
         [BaseView _init:@"请选择系统对应情况" View:self.view];
-    }else if (!officeHouseListModel.所在楼层){
+    }else if (!(officeHouseListModel.所在楼层.length>0)){
         [BaseView _init:@"请输入所在楼层" View:self.view];
-    }else if (!officeHouseListModel.实际房号){
+    }else if (!(officeHouseListModel.实际房号.length>0)){
         [BaseView _init:@"请输入实际房号" View:self.view];
-    }else if (!officeHouseListModel.实用面积){
+    }else if (!(officeHouseListModel.实用面积.length>0)){
         [BaseView _init:@"请输入实用面积" View:self.view];
-    }else if (!officeHouseListModel.朝向){
+    }else if (!(officeHouseListModel.朝向.length>0)){
         [BaseView _init:@"请选择朝向" View:self.view];
-    }else if (!officeHouseListModel.当前租户){
+    }else if (!(officeHouseListModel.当前租户.length>0)){
         [BaseView _init:@"请输入当前租户" View:self.view];
-    }else if (!officeHouseListModel.出入口门牌号照片){
+    }else if (!(officeHouseListModel.出入口门牌号照片.length>0)){
         [BaseView _init:@"请选择出入口门牌号照片" View:self.view];
     }else if ([NetworkManager address:officeHouseListModel.出入口门牌号照片].count!=1){
         [BaseView _init:@"出入口门牌号照片只需要1张" View:self.view];
-    }else if (!officeHouseListModel.房屋照片){
+    }else if (!(officeHouseListModel.房屋照片.length>0)){
         [BaseView _init:@"请选择房屋照片" View:self.view];
     }else if ([NetworkManager address:officeHouseListModel.房屋照片].count<3||[NetworkManager address:officeHouseListModel.房屋照片].count>6){
         [BaseView _init:@"房屋照片3-5" View:self.view];
