@@ -311,7 +311,7 @@
 -(void)netWork:(int)page{
     pageNo = page;
     if ([backStr isEqualToString:@"返回"]) {
-        [self kNetworkListMake];
+        [self kNetworkListMake2];
     }else{
         if ([searchStr isEqualToString:@"搜索"]) {
             [self searchNetwork];

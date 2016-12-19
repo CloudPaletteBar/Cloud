@@ -269,19 +269,21 @@ static NSString *Identifier20=@"Identifier20";
 //获取表单数据
 
 -(void)netFormData{
-   
-   
     NSMutableDictionary *dic=[[NSMutableDictionary alloc]initWithDictionary:@{@"makeType":@"officeBuding"}];
     if (self.estateID) {
-        if ([kUserDefaults objectForKey:@"officeId"]!=NULL) {
-            [dic setObject:self.estateID forKey:@"taskId"];
-//            if (self.selectIndex==1) {
+        if (_selectIndex == 1) {
+            if ([kUserDefaults objectForKey:@"officeId"]!=NULL) {
+                [dic setObject:self.estateID forKey:@"taskId"];
+                //            if (self.selectIndex==1) {
                 [dic setObject:[super replaceString:[kUserDefaults objectForKey:@"officeId" ]] forKey:@"ID"];
-//            }else{
-//                [dic setObject:@"0" forKey:@"ID"];
-//            }
-            [self Init_o];
-            [self netWork:dic];
+                //            }else{
+                //                [dic setObject:@"0" forKey:@"ID"];
+                //            }
+                [self Init_o];
+                [self netWork:dic];
+            }else{
+                [self Init_o];
+            }
         }else{
             [self Init_o];
         }

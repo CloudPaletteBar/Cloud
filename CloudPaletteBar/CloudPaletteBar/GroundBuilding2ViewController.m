@@ -411,12 +411,27 @@
     
     NSDictionary *dict = [NSDictionary dictionaryWithObjectsAndKeys:@"500",@"电气",@"501",@"消防",@"502",@"给排水",@"503",@"弱电",@"504",@"空调",@"505",@"变配电", nil];
     NSArray *array2 = [self array:[super replaceString:groundBuildingListModel.设施安装情况]];
-    [switch1 setOn:NO];
-    [switch2 setOn:NO];
-    [switch3 setOn:NO];
-    [switch4 setOn:NO];
-    [switch5 setOn:NO];
-    [switch6 setOn:NO];
+    if ([look isEqualToString:@"工业新增"]) {
+        [switch1 setOn:YES];
+        [switch2 setOn:YES];
+        [switch3 setOn:YES];
+        [switch4 setOn:YES];
+        [switch5 setOn:YES];
+        [switch6 setOn:YES];
+        groundBuildingListTypeModel.电气 = @"电气";
+        groundBuildingListTypeModel.消防 = @"消防";
+        groundBuildingListTypeModel.给排水 = @"给排水";
+        groundBuildingListTypeModel.弱电 = @"弱电";
+        groundBuildingListTypeModel.空调 = @"空调";
+        groundBuildingListTypeModel.变配电 = @"变配电";
+    }else{
+        [switch1 setOn:NO];
+        [switch2 setOn:NO];
+        [switch3 setOn:NO];
+        [switch4 setOn:NO];
+        [switch5 setOn:NO];
+        [switch6 setOn:NO];
+    }
     for (NSString *str in array2) {
         NSString *strTag = [dict objectForKey:str];
         switch ([strTag intValue]) {
@@ -865,8 +880,7 @@
         case 808:
             groundBuildingListModel.窗保养情况 = str;
             break;
-        case 809:
-            {
+        case 809:{
                 if (index==0) {
                     textField12.userInteractionEnabled=NO;
                     textField13.userInteractionEnabled=NO;
@@ -1313,6 +1327,20 @@
         [BaseView _init:@"请填写竣工时间" View:self.view];
     }else if(!(groundBuildingListModel.楼栋总层数.length>0)){
         [BaseView _init:@"请填写楼栋总层数" View:self.view];
+    }else if ([groundBuildingListModel.电梯 containsString:@"有"]&&!(groundBuildingListModel.电梯数量.length>0)){
+        [BaseView _init:@"请填写电梯数量" View:self.view];
+    }else if ([groundBuildingListModel.物管公司 containsString:@"有"]&&!(groundBuildingListModel.物管公司名称.length>0)){
+        [BaseView _init:@"请填写物管公司名称" View:self.view];
+    }else if ([groundBuildingListModel.物管公司 containsString:@"有"]&&!(groundBuildingListModel.物业管理费.length>0)){
+        [BaseView _init:@"请填写物业管理费" View:self.view];
+    }else if ([groundBuildingListModel.停车位 containsString:@"有"]&&!(groundBuildingListModel.地上停车位.length>0)){
+        [BaseView _init:@"请填写地上停车位" View:self.view];
+    }else if ([groundBuildingListModel.停车位 containsString:@"有"]&&!(groundBuildingListModel.地下停车位.length>0)){
+        [BaseView _init:@"请填写地下停车位" View:self.view];
+    }else if ([ groundBuildingListModel.楼栋类型 containsString:@"厂房"]&&!(groundBuildingListModel.企业名称.length>0)){
+        [BaseView _init:@"请填写企业名称" View:self.view];
+    }else if ([ groundBuildingListModel.楼栋类型 containsString:@"仓储"]&&!(groundBuildingListModel.企业名称.length>0)){
+        [BaseView _init:@"请填写企业名称" View:self.view];
     }else if ([NetworkManager address:groundBuildingListModel.楼栋外观照片].count<1 ){
         [BaseView _init:@"楼栋外观照片1-3张" View:self.view];
     }else{
